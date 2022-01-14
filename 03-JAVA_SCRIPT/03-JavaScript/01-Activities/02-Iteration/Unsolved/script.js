@@ -7,6 +7,7 @@ for (var i=0; i<students.length; i++) {
     console.log('Great to See you,'+students [i]+'!'); 
 
 while (condition) {
+    console.log('hi');
     
 }
 }
