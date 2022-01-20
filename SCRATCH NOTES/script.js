@@ -48,6 +48,15 @@ var handleFormSubmit = function (event) {
       source: skillNames,
     });
   });
+
+  // Datepicker widget
+  $(function () {
+    $('#datepicker').datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+  });
+
   
 
   printSkills(nameInput, dateInput);
