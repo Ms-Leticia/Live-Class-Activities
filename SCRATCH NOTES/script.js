@@ -22,6 +22,14 @@ var handleFormSubmit = function (event) {
     return;
   }
 
+  printSkills(nameInput, dateInput);
+
+  nameInputEl.val('');
+  dateInputEl.val('');
+};
+
+formEl.on('submit', handleFormSubmit);
+
   // Autocomplete widget
   $(function () {
     var skillNames = [
@@ -57,12 +65,11 @@ var handleFormSubmit = function (event) {
     });
   });
 
+  // Sortable interaction
+  $(function () {
+    $('#skills-list').sortable({
+      placeholder: 'ui-state-highlight',
+    });
+    $('#skills-list').disableSelection();
+  });
   
-
-  printSkills(nameInput, dateInput);
-
-  nameInputEl.val('');
-  dateInputEl.val('');
-};
-
-formEl.on('submit', handleFormSubmit);
